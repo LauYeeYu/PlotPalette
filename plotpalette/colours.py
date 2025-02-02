@@ -1,3 +1,10 @@
+"""This module contains the colour palette for the plots.
+
+Specifically, this file provides three dictionaries:
+- `name`: The mapping from colour to the name of colour family.
+- `main_palette`: The main colours in the palette.
+- `palette`: The full palette of colours.
+"""
 
 name = {
     'red':    'monza',        # Scuderia Ferrari
@@ -25,10 +32,10 @@ main_palette = {
 """The palette darkness is used to create a gradient of colours.
 
 Depending on the number of colours picked:
-If pick 1 colour, we will take the regular.
+If pick 1 colour, we will take the colour in the main palette.
 If pick 2 colours, we will take bright and dark.
 If pick 3 colours, we will take light, regular and darker.
-If pick 4 colours, we will take light, bright, regular and dark.
+If pick 4 colours, we will take light, bright, regular and darker.
 
 Therefore, the light, regular and dark will be more important.
 """
