@@ -1,6 +1,6 @@
 """This module provides functions to pick colours from the palette."""
 
-__all__ = ['pick_colours_in_one_family', 'pick_colours']
+__all__ = ['pick_colours_in_one_family', 'pick_colours', 'pick_main_colours']
 
 from .colours import name, main_palette, palette
 
@@ -108,3 +108,20 @@ def pick_colours(
         raise ValueError('The number of sub colours must be an integer or a '
                          'list of integers.')
 
+
+def pick_main_colours(num_main_colours: int) -> list[str]:
+    """Pick the main colours.
+
+    Args:
+        num_main_colours (int): The number of main colours to pick.
+
+    Returns:
+        list: A list of main colours.
+    """
+    if num_main_colours < 1:
+        raise ValueError('The number of main colours to pick must be at least 1.')
+    elif num_main_colours > len(main_palette):
+        raise ValueError('The number of main colours to pick must be at most '
+                         'the number of main colours.')
+
+    return list(main_palette.values())[:num_main_colours]
