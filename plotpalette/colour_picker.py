@@ -2,6 +2,42 @@
 
 from .colours import name, main_palette, palette
 
+__all__ = ['pick_colours']
+
+def pick_colours_in_one_family(num_sub_colours: int, main_colour: str) -> list:
+    match num_sub_colours:
+        case 1:
+            return [palette[main_colour]]
+        case 2:
+            return [
+                palette[f'{main_colour}-bright'],
+                palette[f'{main_colour}-dark'],
+                ]
+        case 3:
+            return [
+                palette[f'{main_colour}-light'],
+                palette[f'{main_colour}-regular'],
+                palette[f'{main_colour}-darker'],
+            ]
+        case 4:
+            return [
+                palette[f'{main_colour}-light'],
+                palette[f'{main_colour}-bright'],
+                palette[f'{main_colour}-regular'],
+                palette[f'{main_colour}-darker'],
+            ]
+        case 5:
+            return [
+                palette[f'{main_colour}-light'],
+                palette[f'{main_colour}-bright'],
+                palette[f'{main_colour}-regular'],
+                palette[f'{main_colour}-dark'],
+                palette[f'{main_colour}-darker'],
+            ]
+        case _:
+            raise ValueError('The number of colours to pick must be between 1 and 5.')
+
+
 def pick_colours(num_colour_family: int, num_sub_colours: int, main_colour: str) -> list:
     """Pick colours from the palette.
 
@@ -34,50 +70,12 @@ def pick_colours(num_colour_family: int, num_sub_colours: int, main_colour: str)
     # Handle the colour families
     colour_families = [main_colour]
     for i in main_palette.keys():
-        if len(colour_families) >= num_sub_colours:
+        if len(colour_families) >= num_colour_family:
             break
         if i == main_colour:
             continue
         colour_families.append(i)
 
-    # Pick the colours
-    match num_colour_family:
-        case 1:
-            return [palette[main_colour]]
-        case 2:
-            return [
-                [
-                    palette[f'{colour}-bright'],
-                    palette[f'{colour}-dark'],
-                ] for colour in colour_families
-            ]
-        case 3:
-            return [
-                [
-                    palette[f'{colour}-light'],
-                    palette[f'{colour}-regular'],
-                    palette[f'{colour}-darker'],
-                ] for colour in colour_families
-            ]
-        case 4:
-            return [
-                [
-                    palette[f'{colour}-light'],
-                    palette[f'{colour}-bright'],
-                    palette[f'{colour}-regular'],
-                    palette[f'{colour}-darker'],
-                ] for colour in colour_families
-            ]
-        case 5:
-            return [
-                [
-                    palette[f'{colour}-light'],
-                    palette[f'{colour}-bright'],
-                    palette[f'{colour}-regular'],
-                    palette[f'{colour}-dark'],
-                    palette[f'{colour}-darker'],
-                ] for colour in colour_families
-            ]
-        case _:
-            raise ValueError('The number of colours to pick must be between 1 and 5.')
+    return [pick_colours_in_one_family(num_sub_colours, colour) for colour in colour_families]
+
 
