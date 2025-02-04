@@ -1,13 +1,12 @@
 """This module provides functions to pick colours from the palette."""
 
-from .colours import name, main_palette, palette
-
 __all__ = ['pick_colours_in_one_family', 'pick_colours']
 
+from .colours import name, main_palette, palette
 
 def pick_colours_in_one_family(
         num_sub_colours: int,
-        main_colour: str
+        main_colour: str,
 ) -> list:
     """ Pick colours in one family.
 
@@ -57,7 +56,7 @@ def pick_colours_in_one_family(
 def pick_colours(
         num_colour_family: int,
         num_sub_colours: int | list,
-        main_colour: str
+        main_colour: str,
 ) -> list:
     """Pick colours from the palette.
 

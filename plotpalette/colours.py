@@ -6,6 +6,9 @@ Specifically, this file provides three dictionaries:
 - `palette`: The full palette of colours.
 """
 
+__all__ = ['name', 'main_palette', 'palette']
+
+
 name = {
     'red':    'monza',        # Scuderia Ferrari
     'orange': 'zandvoort',    # House of Orange-Nassau
