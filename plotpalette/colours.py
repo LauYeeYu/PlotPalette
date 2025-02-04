@@ -19,13 +19,13 @@ name = {
 
 main_palette = {
     'monza': '#b32414',        # Red
-    'zandvoort': '#de6000',    # Orange
-    'silverstone': '#e4c315',  # Yellow
-    'spa': '#2d7830',          # Green
-    'miami': '#00c5c1',        # Cyan
     'shanghai': '#4f89c4',     # Blue
-    'seattle': '#5b408e',      # Purple
+    'zandvoort': '#de6000',    # Orange
+    'spa': '#2d7830',          # Green
+    'silverstone': '#e4c315',  # Yellow
+    'miami': '#00c5c1',        # Cyan
     'sakhir': '#580e0e',       # Brown
+    'seattle': '#5b408e',      # Purple
 }
 
 
