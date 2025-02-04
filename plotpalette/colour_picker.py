@@ -7,7 +7,7 @@ from .colours import name, main_palette, palette
 def pick_colours_in_one_family(
         num_sub_colours: int,
         main_colour: str,
-) -> list:
+) -> list[str]:
     """ Pick colours in one family.
 
     Args:
@@ -55,15 +55,15 @@ def pick_colours_in_one_family(
 
 def pick_colours(
         num_colour_family: int,
-        num_sub_colours: int | list,
+        num_sub_colours: int | list[int],
         main_colour: str,
-) -> list:
+) -> list[list[str]]:
     """Pick colours from the palette.
 
     Args:
         num_colour_family (int): The number of colour families to pick.
-        num_sub_colours (int | list): The number of sub colours in each colour
-                                      families to pick.
+        num_sub_colours (int | list[int]): The number of sub colours in each
+                                           colour families to pick.
         main_colour (str): The main colour to pick. You may use the name
                            of colour in the main palette (e.g., silverstone)
                            or the colour (e.g., yellow).
