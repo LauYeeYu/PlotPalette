@@ -4,6 +4,15 @@ PlotPalette is a Python package that simplifies the process of creating colour
 palettes for plots. It provides a combination of colours for plots, and a
 colour picker to help select the colours.
 
+## Colour Palette
+
+### Main Colours
+![Main Palettes](assets/main_palette.png)
+
+### All Colours
+
+![Colour Palettes](assets/all_palette.png)
+
 ## Installation
 
 ### Prerequisites
