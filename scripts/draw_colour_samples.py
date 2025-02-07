@@ -13,22 +13,24 @@ def draw_main_palette():
     num = (len(names) + 1) // 2
     names_1 = names[:num]
     names_2 = names[num:]
-    y_pos = range(num)
+    y_pos_1 = [-i for i in range(len(names_1))]
+    y_pos_2 = [-i for i in range(len(names_2))]
     colours = list(plotpalette.main_palette.values())
     colours_1 = colours[:num]
     colours_2 = colours[num:]
-    height = [1] * num
-    offset = [1.1] * num
+    height_1 = [1] * len(names_1)
+    height_2 = [1] * len(names_2)
+    offset = [1.1] * len(names_2)
     width = 0.8
 
     # Create a figure and axis
     fig, ax = plt.subplots(figsize=(10,5))
-    bar_1 = ax.barh(y_pos, height, width, color=colours_1, hatch='')
-    bar_2 = ax.barh(y_pos, height, width, offset, color=colours_2, hatch='')
+    bar_1 = ax.barh(y_pos_1, height_1, width, color=colours_1, hatch='')
+    bar_2 = ax.barh(y_pos_2, height_2, width, offset, color=colours_2, hatch='')
     ax.set_yticks([])
     ax.set_xticks([])
     ax.set_xlim(-0.05, 2.15)
-    ax.set_ylim(-0.5, num - 0.5)
+    ax.set_ylim(-num + 0.5, 0.5)
     ax.axis('off')
 
     # Add the names
