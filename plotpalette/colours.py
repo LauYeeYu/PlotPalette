@@ -18,6 +18,7 @@ name = {
     'blue':   'shanghai',     # Sea and sky
     'purple': 'seattle',      # Go Huskies!
     'brown':  'sakhir',       # Desert sand
+    'grey':   'montreal',     # Ice and snow
 }
 
 main_palette = {
@@ -29,6 +30,7 @@ main_palette = {
     'miami': '#00c5c1',        # Cyan
     'sakhir': '#580e0e',       # Brown
     'seattle': '#5b408e',      # Purple
+    'montreal': '#606060',     # Grey
 }
 
 
@@ -106,4 +108,11 @@ palette = main_palette | {
     'sakhir-regular': '#893924',
     'sakhir-dark': '#580e0e',  # 'sakhir' colour
     'sakhir-darker': '#420404',
+
+    # Montreal (Grey)
+    'montreal-light': '#c0c0c0',
+    'montreal-bright': '#909090',
+    'montreal-regular': '#606060',  # 'montreal' colour
+    'montreal-dark': '#404040',
+    'montreal-darker': '#202020',
 }
