@@ -9,9 +9,33 @@ colour picker to help select the colours.
 ### Main Colours
 ![Main Palettes](assets/main_palette.png)
 
+| Colour |    Name     |  Value  |
+|:------:|:-----------:|:-------:|
+|  Red   |    Monza    | #b32414 |
+| Orange |  Zandvoort  | #de6000 |
+| Yellow | Silverstone | #e4c315 |
+| Green  |     Spa     | #2d7830 |
+|  Cyan  |    Miami    | #00c5c1 |
+|  Blue  |  Shanghai   | #4f89c4 |
+| Purple |   Seattle   | #5b408e |
+| Brown  |   Sakhir    | #580e0e |
+|  Grey  |  Montreal   | #606060 |
+
 ### All Colours
 
 ![Colour Palettes](assets/all_palette.png)
+
+| Colour |    Name     |  Light  | Bright  | Regular |  Dark   | Darker  |
+|:------:|:-----------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  Red   |    Monza    | #ff8c82 | #f46255 | #e13f2d | #b32414 | #8e2207 | 
+| Orange |  Zandvoort  | #ffb949 | #ff9900 | #ff7a14 | #de6000 | #d44601 | 
+| Yellow | Silverstone | #faf377 | #f9ed48 | #f1d126 | #e4c315 | #c5a400 | 
+| Green  |     Spa     | #8ae68a | #42ce42 | #429b44 | #2d7830 | #1b591e | 
+|  Cyan  |    Miami    | #ace6e5 | #0de8e8 | #00c5c1 | #009b92 | #007a70 | 
+|  Blue  |  Shanghai   | #add6ff | #69abee | #4f89c4 | #2c659e | #1b3a5f | 
+| Purple |   Seattle   | #c2b1e1 | #8d7bc5 | #6b5ebd | #5b408e | #311a6e | 
+| Brown  |   Sakhir    | #be9696 | #ad5d44 | #893924 | #580e0e | #420404 | 
+|  Grey  |  Montreal   | #c0c0c0 | #909090 | #606060 | #404040 | #202020 | 
 
 ## Installation
 
