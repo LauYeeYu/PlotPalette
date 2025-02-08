@@ -63,8 +63,12 @@ def draw_all_palette():
 
     def draw_one_colour(name, y_pos):
         for i, darkness in enumerate(palette_darkness):
-            ax.barh(y_pos, height, width, i,
-                    color=plotpalette.palette[f'{name}-{darkness}'], hatch='')
+            colour = plotpalette.palette[f'{name}-{darkness}']
+            bar = ax.barh(y_pos, height, width, i,
+                          color=colour, hatch='')
+            ax.text(i + 0.97, bar[0].get_y() + 0.03, colour,
+                    ha='right', va='bottom', color='white',
+                    fontsize=14, fontweight='bold')
     for i, name in enumerate(names):
         draw_one_colour(name, -i)
 
