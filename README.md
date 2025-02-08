@@ -7,6 +7,10 @@ colour picker to help select the colours.
 ## Colour Palette
 
 ### Main Colours
+
+*Note: To use the main colours, you should use the format of
+`{name}` in non-capitalized form (e.g., `monza`).*
+
 ![Main Palettes](assets/main_palette.png)
 
 | Colour |    Name     |  Value  |
@@ -22,6 +26,9 @@ colour picker to help select the colours.
 |  Grey  |  Montreal   | #606060 |
 
 ### All Colours
+
+*Note: To use these colours, you should use the format of
+`{name}-{lightness}` in non-capitalized form (e.g., `monza-regular`).*
 
 ![Colour Palettes](assets/all_palette.png)
 
