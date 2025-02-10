@@ -3,8 +3,9 @@
 import plotpalette
 
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 
-if __name__ == '__main__':
+def main():
     # Create a list of all the main colours
     names = list(plotpalette.palette.keys())
     x_pos = range(len(names))
@@ -21,3 +22,8 @@ if __name__ == '__main__':
     # Show the plot
     plt.tight_layout()
     plt.show()
+
+
+if __name__ == '__main__':
+    with plotpalette.set_font('Monospace'):
+        main()
