@@ -1,6 +1,6 @@
 """Draw bar charts easily."""
 
-__all__ = ['bar_chart']
+__all__ = []
 
 from .colour_picker import pick_main_colours
 from .colours import main_palette
@@ -8,6 +8,7 @@ from .colours import main_palette
 import matplotlib.pyplot as plt
 
 
+# This function is under development and not complete.
 def bar_chart(
         bar_names: list[str],
         data: dict[str, float],
