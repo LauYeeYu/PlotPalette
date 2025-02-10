@@ -3,8 +3,6 @@
 __all__ = ['set_font']
 
 import matplotlib
-import matplotlib.pyplot
-import matplotlib.font_manager
 import contextlib
 
 @contextlib.contextmanager
@@ -27,5 +25,3 @@ def set_font(font_name: str) -> None:
         yield
     finally:
         matplotlib.rcParams['font.family'] = old_font
-
-
